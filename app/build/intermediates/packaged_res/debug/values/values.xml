@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="white">#FFFFFF</color>
+    <string name="gcm_defaultSenderId" translatable="false">764959441031</string>
+    <string name="google_api_key" translatable="false">AIzaSyCb3UpBz_2od75Uuvj4qKqnjo8oLvlRMHs</string>
+    <string name="google_app_id" translatable="false">1:764959441031:android:36339fb0b5bc3d9869b822</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCb3UpBz_2od75Uuvj4qKqnjo8oLvlRMHs</string>
+    <string name="google_storage_bucket" translatable="false">snapcart-35fec.firebasestorage.app</string>
+    <string name="project_id" translatable="false">snapcart-35fec</string>
+    <style name="Theme.SnapCart" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#388E3C</item>
+        <item name="colorPrimaryVariant">#2E7D32</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#FF9800</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:windowBackground">#FAFAFA</item>
+    </style>
+</resources>
