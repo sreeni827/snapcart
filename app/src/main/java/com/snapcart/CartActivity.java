@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 public class CartActivity extends AppCompatActivity {
@@ -24,8 +27,11 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-        // ❌ This line causes crash with NoActionBar theme
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // ✅ Setup toolbar just like OrdersActivity
+        Toolbar toolbar = findViewById(R.id.cart_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         cartRecyclerView = findViewById(R.id.cart_recycler_view);
         totalAmountText = findViewById(R.id.cart_total);
@@ -38,7 +44,6 @@ public class CartActivity extends AppCompatActivity {
         cartRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         cartRecyclerView.setAdapter(cartAdapter);
 
-        // 👁️ Show or hide empty cart message
         if (cartList.isEmpty()) {
             emptyMessage.setVisibility(View.VISIBLE);
             cartRecyclerView.setVisibility(View.GONE);

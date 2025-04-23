@@ -25,6 +25,7 @@ id cart_product_price
 id cart_product_quantity
 id cart_product_title
 id cart_recycler_view
+id cart_toolbar
 id cart_total
 id edit_address
 id email

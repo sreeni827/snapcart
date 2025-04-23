@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
+
 import java.util.ArrayList;
 
 public class CheckoutActivity extends AppCompatActivity {
@@ -31,7 +32,6 @@ public class CheckoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         summaryText = findViewById(R.id.text_order_summary);
         addressInput = findViewById(R.id.edit_address);
@@ -49,9 +49,10 @@ public class CheckoutActivity extends AppCompatActivity {
                     .append("\n");
             total += item.getPrice() * item.getQuantity();
         }
-        summary.append("\nTotal: $").append(total);
+        summary.append("\nTotal: $").append(String.format("%.2f", total));
         summaryText.setText(summary.toString());
 
+        // Payment options
         ArrayAdapter<String> paymentAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
@@ -60,7 +61,7 @@ public class CheckoutActivity extends AppCompatActivity {
         paymentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         paymentSpinner.setAdapter(paymentAdapter);
 
-        // 🔐 Ask for POST_NOTIFICATIONS permission (Android 13+)
+        // 🔐 Request POST_NOTIFICATIONS permission
         requestNotificationPermissionIfNeeded();
 
         confirmOrder.setOnClickListener(v -> {
@@ -72,31 +73,40 @@ public class CheckoutActivity extends AppCompatActivity {
                 return;
             }
 
-            // 🔔 Show notification
-            showOrderNotification();
+            if (isNotificationPermissionGranted()) {
+                showOrderNotification();
+            }
 
-            // 🗃️ Save order
             OrderManager.addOrder(new Order(currentCart, address, payment));
-
             Toast.makeText(this, "✅ Order placed with " + payment + "\nAddress: " + address, Toast.LENGTH_LONG).show();
 
-            CartManager.clearCart(); // 🧹 Clear cart
-            finish(); // Go back
+            CartManager.clearCart(); // Clear cart
+            finish(); // Exit checkout
         });
     }
 
+    // ✅ Runtime permission check (Android 13+)
     private void requestNotificationPermissionIfNeeded() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
                     != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,
+                ActivityCompat.requestPermissions(
+                        this,
                         new String[]{android.Manifest.permission.POST_NOTIFICATIONS},
-                        NOTIFICATION_PERMISSION_CODE);
+                        NOTIFICATION_PERMISSION_CODE
+                );
             }
         }
     }
 
+    private boolean isNotificationPermissionGranted() {
+        return Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU ||
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
+                        == PackageManager.PERMISSION_GRANTED;
+    }
+
     private void showOrderNotification() {
+        // Setup channel for Android 8+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
@@ -104,7 +114,9 @@ public class CheckoutActivity extends AppCompatActivity {
                     NotificationManager.IMPORTANCE_DEFAULT
             );
             NotificationManager manager = getSystemService(NotificationManager.class);
-            if (manager != null) manager.createNotificationChannel(channel);
+            if (manager != null) {
+                manager.createNotificationChannel(channel);
+            }
         }
 
         Intent intent = new Intent(this, ProductListActivity.class);
@@ -121,16 +133,14 @@ public class CheckoutActivity extends AppCompatActivity {
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent);
 
-        NotificationManagerCompat.from(this).notify(1001, builder.build());
+        try {
+            NotificationManagerCompat.from(this).notify(1001, builder.build());
+        } catch (SecurityException e) {
+            Toast.makeText(this, "⚠️ Cannot show notification: permission not granted", Toast.LENGTH_SHORT).show();
+        }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
-    }
-
-    // Optional: handle permission result
+    // ✅ Optional: handle user response to permission dialog
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String[] permissions,
@@ -138,10 +148,16 @@ public class CheckoutActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == NOTIFICATION_PERMISSION_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Notification permission granted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "✅ Notification permission granted", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Notification permission denied", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "⚠️ Notification permission denied", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

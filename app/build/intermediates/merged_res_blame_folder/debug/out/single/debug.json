@@ -100,8 +100,8 @@
         "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_checkout.xml"
     },
     {
-        "merged": "com.snapcart.app-merged_res-36:/layout_activity_orders.xml.flat",
-        "source": "com.snapcart.app-main-38:/layout/activity_orders.xml"
+        "merged": "com.snapcart.app-merged_res-36:/layout_activity_cart.xml.flat",
+        "source": "com.snapcart.app-main-38:/layout/activity_cart.xml"
     },
     {
         "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",

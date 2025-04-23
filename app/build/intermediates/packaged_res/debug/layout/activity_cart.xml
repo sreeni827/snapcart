@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FAFAFA"
     android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!-- ✅ Toolbar like OrdersActivity -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/cart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:title="Your Cart"
+        android:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!-- 🔔 Empty Cart Message -->
     <TextView
@@ -33,7 +43,8 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:padding="8dp" />
 
     <!-- ✅ Proceed to Checkout -->
     <Button
@@ -41,7 +52,7 @@
         android:text="Proceed to Checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
         android:backgroundTint="#388E3C"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="16dp" />
+        android:textColor="#FFFFFF" />
 </LinearLayout>
