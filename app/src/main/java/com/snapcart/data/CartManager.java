@@ -1,60 +1,47 @@
 package com.snapcart.data;
 
-import com.snapcart.models.Product;
+import com.snapcart.data.database.CartEntity;
+import com.snapcart.data.database.ProductEntity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CartManager {
 
     private static CartManager instance;
-    private final HashMap<Product, Integer> cartItems;
+    private final HashMap<ProductEntity, Integer> cartItems = new HashMap<>();
 
-    private CartManager() {
-        cartItems = new HashMap<>();
-    }
+    private CartManager() {}
 
-    public static synchronized CartManager getInstance() {
+    public static CartManager getInstance() {
         if (instance == null) {
             instance = new CartManager();
         }
         return instance;
     }
 
-    public void addToCart(Product product) {
-        if (cartItems.containsKey(product)) {
-            cartItems.put(product, cartItems.get(product) + 1);
+    public void addToCart(ProductEntity product) {
+        int quantity = cartItems.getOrDefault(product, 0);
+        cartItems.put(product, quantity + 1);
+        product.setQuantity(quantity + 1);
+    }
+
+    public void increaseQuantity(ProductEntity product) {
+        int quantity = cartItems.getOrDefault(product, 0);
+        cartItems.put(product, quantity + 1);
+        product.setQuantity(quantity + 1);
+    }
+
+    public void decreaseQuantity(ProductEntity product) {
+        int quantity = cartItems.getOrDefault(product, 0);
+        if (quantity > 1) {
+            cartItems.put(product, quantity - 1);
+            product.setQuantity(quantity - 1);
         } else {
-            cartItems.put(product, 1);
-        }
-    }
-
-    public void removeFromCart(Product product) {
-        if (cartItems.containsKey(product)) {
-            int qty = cartItems.get(product);
-            if (qty > 1) {
-                cartItems.put(product, qty - 1);
-            } else {
-                cartItems.remove(product);
-            }
-        }
-    }
-
-    public void increaseQuantity(Product product) {
-        if (cartItems.containsKey(product)) {
-            cartItems.put(product, cartItems.get(product) + 1);
-        }
-    }
-
-    public void decreaseQuantity(Product product) {
-        if (cartItems.containsKey(product)) {
-            int qty = cartItems.get(product);
-            if (qty > 1) {
-                cartItems.put(product, qty - 1);
-            } else {
-                cartItems.remove(product);
-            }
+            cartItems.remove(product);
+            product.setQuantity(0);
         }
     }
 
@@ -62,27 +49,30 @@ public class CartManager {
         cartItems.clear();
     }
 
-    public HashMap<Product, Integer> getCartItems() {
-        return cartItems;
-    }
-
-    public List<Product> getCartProductList() {
-        List<Product> productList = new ArrayList<>();
-        for (Product product : cartItems.keySet()) {
-            product.setQuantity(cartItems.get(product)); // ✅ set quantity from the map
-            productList.add(product);
+    // ✅ Fix for your issue — return a list of products
+    public List<ProductEntity> getCartItemsAsList() {
+        List<ProductEntity> list = new ArrayList<>();
+        for (ProductEntity product : cartItems.keySet()) {
+            product.setQuantity(cartItems.get(product)); // ensure quantity is up-to-date
+            list.add(product);
         }
-        return productList;
+        return list;
+    }
+    public List<CartEntity> getCartProductList() {
+        List<CartEntity> cartEntityList = new ArrayList<>();
+        for (Map.Entry<ProductEntity, Integer> entry : cartItems.entrySet()) {
+            ProductEntity product = entry.getKey();
+            int quantity = entry.getValue();
+            CartEntity entity = new CartEntity(product.getTitle(), product.getPrice(), quantity);
+            cartEntityList.add(entity);
+        }
+        return cartEntityList;
     }
 
 
-    public int getProductQuantity(Product product) {
-        return cartItems.getOrDefault(product, 0);
-    }
-
-    public double getTotalPrice() {
+    public double getTotalAmount() {
         double total = 0.0;
-        for (Product product : cartItems.keySet()) {
+        for (ProductEntity product : cartItems.keySet()) {
             total += product.getPrice() * cartItems.get(product);
         }
         return total;

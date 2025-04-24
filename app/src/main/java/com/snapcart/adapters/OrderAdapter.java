@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.snapcart.R;
 import com.snapcart.models.Order;
-import com.snapcart.models.Product;
+import com.snapcart.data.database.ProductEntity;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         holder.orderDate.setText(order.getDate());
 
         StringBuilder items = new StringBuilder();
-        for (Product p : order.getProducts()) {
+        for (ProductEntity p : order.getProducts()) {
             items.append(p.getTitle())
                     .append(" × ")
                     .append(p.getQuantity())

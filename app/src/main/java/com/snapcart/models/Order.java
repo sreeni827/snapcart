@@ -1,23 +1,24 @@
 package com.snapcart.models;
 
-import android.icu.text.SimpleDateFormat;
+import com.snapcart.data.database.ProductEntity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
 public class Order {
-    private List<Product> products;
+    private List<ProductEntity> products;
     private String address;
     private String paymentMethod;
 
-    public Order(List<Product> products, String address, String paymentMethod) {
+    public Order(List<ProductEntity> products, String address, String paymentMethod) {
         this.products = products;
         this.address = address;
         this.paymentMethod = paymentMethod;
     }
 
-    public List<Product> getProducts() {
+    public List<ProductEntity> getProducts() {
         return products;
     }
 
@@ -31,18 +32,17 @@ public class Order {
 
     public double getTotal() {
         double total = 0.0;
-        for (Product p : products) {
+        for (ProductEntity p : products) {
             total += p.getPrice() * p.getQuantity();
         }
         return total;
-    }
-
-    public String getDate() {
-        return new SimpleDateFormat("MMM dd, yyyy hh:mm a", Locale.getDefault()).format(new Date());
     }
 
     public double getTotalPrice() {
         return getTotal();
     }
 
+    public String getDate() {
+        return new SimpleDateFormat("MMM dd, yyyy hh:mm a", Locale.getDefault()).format(new Date());
+    }
 }

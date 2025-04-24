@@ -1,5 +1,6 @@
 package com.snapcart.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,8 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.snapcart.R;
+import com.snapcart.activities.ProductDetailsActivity;
 import com.snapcart.adapters.ProductAdapter;
-import com.snapcart.models.Product;
+import com.snapcart.data.database.ProductEntity;
+
 
 import java.util.ArrayList;
 
@@ -28,8 +31,8 @@ public class SearchFragment extends Fragment {
     private RecyclerView searchRecyclerView;
     private TextView searchHintText;
     private ProductAdapter adapter;
-    private ArrayList<Product> allProducts;
-    private ArrayList<Product> filteredList;
+    private ArrayList<ProductEntity> allProducts;
+    private ArrayList<ProductEntity> filteredList;
 
     @Nullable
     @Override
@@ -45,9 +48,10 @@ public class SearchFragment extends Fragment {
         allProducts = getAllProducts(); // dummy list
         filteredList = new ArrayList<>();
 
-        adapter = new ProductAdapter(filteredList, product -> {
-            // Optional: Add to cart or navigate
-        });
+        adapter = new ProductAdapter(filteredList, getContext());
+
+
+
 
         searchRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         searchRecyclerView.setAdapter(adapter);
@@ -74,7 +78,7 @@ public class SearchFragment extends Fragment {
             return;
         }
 
-        for (Product p : allProducts) {
+        for (ProductEntity p : allProducts) {
             if (p.getTitle().toLowerCase().contains(query.toLowerCase())) {
                 filteredList.add(p);
             }
@@ -85,12 +89,12 @@ public class SearchFragment extends Fragment {
         searchRecyclerView.setVisibility(filteredList.isEmpty() ? View.GONE : View.VISIBLE);
     }
 
-    private ArrayList<Product> getAllProducts() {
-        ArrayList<Product> list = new ArrayList<>();
-        list.add(new Product("Smartphone", "Phones", 499.00, R.drawable.smartphone));
-        list.add(new Product("Wireless Headphones", "Accessories", 59.99, R.drawable.headphones));
-        list.add(new Product("Laptop", "Laptops", 899.00, R.drawable.laptop));
-        list.add(new Product("Bluetooth Speaker", "Accessories", 39.99, R.drawable.speaker));
+    private ArrayList<ProductEntity> getAllProducts() {
+        ArrayList<ProductEntity> list = new ArrayList<>();
+        list.add(new ProductEntity("Smartphone", 499.00, 1, R.drawable.smartphone, "Phones"));
+        list.add(new ProductEntity("Wireless Headphones", 59.99, 1, R.drawable.headphones, "Accessories"));
+        list.add(new ProductEntity("Laptop", 899.00, 1, R.drawable.laptop, "Laptops"));
+        list.add(new ProductEntity("Bluetooth Speaker", 39.99, 1, R.drawable.speaker, "Accessories"));
         return list;
     }
 }

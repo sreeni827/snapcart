@@ -10,14 +10,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.snapcart.R;
 import com.snapcart.activities.CheckoutActivity;
 import com.snapcart.adapters.CartAdapter;
-import com.snapcart.data.CartManager;
-import com.snapcart.models.Product;
+import com.snapcart.data.database.CartEntity;
+import com.snapcart.viewmodel.CartViewModel;
 
 import java.util.List;
 
@@ -26,7 +28,8 @@ public class CartFragment extends Fragment {
     private RecyclerView cartRecyclerView;
     private TextView totalAmountTextView;
     private Button checkoutButton;
-    private List<Product> cartItems;
+    private CartAdapter adapter;
+    private CartViewModel cartViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,14 +41,18 @@ public class CartFragment extends Fragment {
 
         cartRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        cartItems = CartManager.getInstance().getCartProductList();
-        CartAdapter adapter = new CartAdapter(cartItems, requireContext(), this::updateTotalAmount);
-        cartRecyclerView.setAdapter(adapter);
-
-        updateTotalAmount(); // Initialize total
+        cartViewModel = new ViewModelProvider(this).get(CartViewModel.class);
+        cartViewModel.getCartItems().observe(getViewLifecycleOwner(), new Observer<List<CartEntity>>() {
+            @Override
+            public void onChanged(List<CartEntity> cartEntities) {
+                adapter = new CartAdapter(cartEntities, requireContext(), CartFragment.this::updateTotalAmount);
+                cartRecyclerView.setAdapter(adapter);
+                updateTotalAmount(cartEntities);
+            }
+        });
 
         checkoutButton.setOnClickListener(v -> {
-            if (!CartManager.getInstance().getCartItems().isEmpty()) {
+            if (adapter != null && adapter.getItemCount() > 0) {
                 startActivity(new Intent(getActivity(), CheckoutActivity.class));
             } else {
                 Toast.makeText(getActivity(), "Cart is empty", Toast.LENGTH_SHORT).show();
@@ -57,9 +64,12 @@ public class CartFragment extends Fragment {
 
     private void updateTotalAmount() {
         double total = 0.0;
-        for (Product p : cartItems) {
-            total += p.getPrice() * p.getQuantity();
+        if (adapter != null) {
+            for (CartEntity item : adapter.getItems()) {
+                total += item.getPrice() * item.getQuantity();
+            }
         }
         totalAmountTextView.setText("Total: $" + String.format("%.2f", total));
     }
+
 }

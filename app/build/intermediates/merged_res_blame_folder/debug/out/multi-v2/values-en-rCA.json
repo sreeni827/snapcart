@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.snapcart.app-mergeDebugResources-46:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.snapcart.app-mergeDebugResources-50:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Gradle\\gradle-6.8.3\\caches\\8.10\\transforms\\8697222dce59f4efcdec9ed32b1a61dd\\transformed\\core-1.13.0\\res\\values-en-rCA\\values-en-rCA.xml",

@@ -30,6 +30,7 @@ public class OrdersActivity extends AppCompatActivity {
         ordersRecyclerView = findViewById(R.id.orders_recycler_view);
         emptyOrdersText = findViewById(R.id.text_no_orders);
 
+        // ✅ Load orders
         if (OrderManager.getInstance().getOrders().isEmpty()) {
             emptyOrdersText.setVisibility(TextView.VISIBLE);
             ordersRecyclerView.setVisibility(RecyclerView.GONE);

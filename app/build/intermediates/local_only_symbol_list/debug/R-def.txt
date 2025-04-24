@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array categories_array
 color black
 color colorOnPrimary
 color nav_item_color
@@ -51,6 +52,7 @@ id cart_product_title
 id cart_recycler_view
 id cart_toolbar
 id cart_total
+id categoryTextView
 id checkout_button
 id checkout_toolbar
 id checkout_total
@@ -62,6 +64,7 @@ id go_to_login
 id go_to_register
 id homeFragment
 id home_recycler_view
+id image_product
 id image_profile
 id login_button
 id menu_cart
@@ -80,7 +83,8 @@ id orders_recycler_view
 id orders_toolbar
 id password
 id payment_group
-id product_image
+id priceTextView
+id productImageView
 id product_name
 id product_price
 id profileFragment
@@ -95,6 +99,7 @@ id search_hint_text
 id search_input_layout
 id search_recycler_view
 id search_root
+id spinner_category
 id spinner_payment_method
 id splash_logo
 id text_cart_empty
@@ -104,7 +109,10 @@ id text_order_date
 id text_order_items
 id text_order_summary
 id text_order_total
+id text_product_name
+id text_product_price
 id text_user_name
+id titleTextView
 id toolbar
 id total_amount_text_view
 layout activity_cart
@@ -113,12 +121,14 @@ layout activity_login
 layout activity_main
 layout activity_order_details
 layout activity_orders
+layout activity_product_details
 layout activity_product_list
 layout activity_register
 layout activity_splash
 layout activity_test_logo
 layout fragment_cart
 layout fragment_home
+layout fragment_product_list
 layout fragment_profile
 layout fragment_search
 layout item_cart
@@ -131,6 +141,7 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
+string app_name
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id

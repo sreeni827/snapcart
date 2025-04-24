@@ -17,17 +17,22 @@ import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 import com.snapcart.R;
 import com.snapcart.adapters.ProductAdapter;
-import com.snapcart.models.Product;
+import com.snapcart.data.database.ProductEntity;
+
 import com.snapcart.data.CartManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private ProductAdapter adapter;
-    private ArrayList<Product> allProducts;
-    private ArrayList<Product> filteredProducts;
+    private List<ProductEntity> cartItems;
+
+    private ArrayList<ProductEntity> allProducts;
+    private ArrayList<ProductEntity> filteredProducts;
+
 
     @Nullable
     @Override
@@ -43,11 +48,7 @@ public class HomeFragment extends Fragment {
         filteredProducts = new ArrayList<>(allProducts);
 
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-
-        adapter = new ProductAdapter(filteredProducts, product -> {
-            CartManager.getInstance().addToCart(product);
-            Toast.makeText(getContext(), product.getName() + " added to cart", Toast.LENGTH_SHORT).show();
-        });
+        adapter = new ProductAdapter(filteredProducts, getContext());
 
         recyclerView.setAdapter(adapter);
 
@@ -66,7 +67,7 @@ public class HomeFragment extends Fragment {
         if (category.equals("All")) {
             filteredProducts.addAll(allProducts);
         } else {
-            for (Product p : allProducts) {
+            for (ProductEntity p : allProducts) {
                 if (p.getCategory().equalsIgnoreCase(category)) {
                     filteredProducts.add(p);
                 }
@@ -75,14 +76,14 @@ public class HomeFragment extends Fragment {
         adapter.notifyDataSetChanged();
     }
 
-    private ArrayList<Product> getDummyProducts() {
-        ArrayList<Product> list = new ArrayList<>();
-        list.add(new Product("Wireless Headphones", "Accessories", 59.99, R.drawable.headphones));
-        list.add(new Product("Smartphone", "Phones", 499.00, R.drawable.smartphone));
-        list.add(new Product("Fitness Watch", "Watches", 99.99, R.drawable.smartwatch));
-        list.add(new Product("Bluetooth Speaker", "Accessories", 39.99, R.drawable.speaker));
-        list.add(new Product("Laptop", "Laptops", 799.00, R.drawable.laptop));
-        list.add(new Product("VR Headset", "Accessories", 149.00, R.drawable.ic_placeholder));
+    private ArrayList<ProductEntity> getDummyProducts() {
+        ArrayList<ProductEntity> list = new ArrayList<>();
+        list.add(new ProductEntity("Wireless Headphones", 59.99, 1, R.drawable.headphones, "Accessories"));
+        list.add(new ProductEntity("Smartphone", 499.00, 1, R.drawable.smartphone, "Phones"));
+        list.add(new ProductEntity("Fitness Watch", 99.99, 1, R.drawable.smartwatch, "Watches"));
+        list.add(new ProductEntity("Bluetooth Speaker", 39.99, 1, R.drawable.speaker, "Accessories"));
+        list.add(new ProductEntity("Laptop", 799.00, 1, R.drawable.laptop, "Laptops"));
+        list.add(new ProductEntity("VR Headset", 149.00, 1, R.drawable.ic_placeholder, "Accessories"));
         return list;
     }
 }

@@ -15,7 +15,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.snapcart.R;
 import com.snapcart.data.OrderManager;
 import com.snapcart.models.Order;
-import com.snapcart.models.Product;
+import com.snapcart.data.database.ProductEntity;
+
 
 import java.util.List;
 
@@ -75,9 +76,9 @@ public class ProfileFragment extends Fragment {
         }
     }
 
-    private String getItemsSummary(List<Product> products) {
+    private String getItemsSummary(List<ProductEntity> products) {
         StringBuilder builder = new StringBuilder();
-        for (Product product : products) {
+        for (ProductEntity product : products) {
             builder.append("- ").append(product.getTitle())
                     .append(" x").append(product.getQuantity())
                     .append("\n");

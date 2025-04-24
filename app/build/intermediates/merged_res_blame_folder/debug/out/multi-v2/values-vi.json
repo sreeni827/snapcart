@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.snapcart.app-mergeDebugResources-46:/values-vi/values-vi.xml",
+            "outputFile": "com.snapcart.app-mergeDebugResources-50:/values-vi/values-vi.xml",
             "map": [
                 {
                     "source": "C:\\Gradle\\gradle-6.8.3\\caches\\8.10\\transforms\\41cd0d310886649455147e1e76203165\\transformed\\navigation-ui-2.8.9\\res\\values-vi\\values-vi.xml",

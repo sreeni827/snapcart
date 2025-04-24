@@ -4,25 +4,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.snapcart.data.CartManager;
-import com.snapcart.models.Product;
-import com.snapcart.adapters.ProductAdapter;
 import com.snapcart.R;
+import com.snapcart.adapters.ProductAdapter;
+import com.snapcart.data.database.ProductEntity;
+import com.snapcart.viewmodel.ProductViewModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProductListActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ProductAdapter adapter;
-    private ArrayList<Product> productList;
+    private List<ProductEntity> productList = new ArrayList<>();
+    private ProductViewModel productViewModel;
+
+    private List<ProductEntity> getDummyProducts() {
+        List<ProductEntity> list = new ArrayList<>();
+        list.add(new ProductEntity("Wireless Headphones", 59.99, 1, R.drawable.headphones, "Accessories"));
+        list.add(new ProductEntity("Smartphone", 499.00, 1, R.drawable.smartphone, "Phones"));
+        list.add(new ProductEntity("Fitness Watch", 99.99, 1, R.drawable.smartwatch, "Watches"));
+        list.add(new ProductEntity("Bluetooth Speaker", 39.99, 1, R.drawable.speaker, "Accessories"));
+        return list;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +50,24 @@ public class ProductListActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view_products);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new ProductAdapter(productList, this);
+        recyclerView.setAdapter(adapter);
 
-        productList = getDummyProducts();
+        productViewModel = new ViewModelProvider(this).get(ProductViewModel.class);
 
-        adapter = new ProductAdapter(productList, product -> {
-            CartManager.getInstance().addToCart(product);
-            Toast.makeText(this, product.getTitle() + " added to cart!", Toast.LENGTH_SHORT).show();
+        // 🔁 Observe product data
+        productViewModel.getAllProducts().observe(this, products -> {
+            productList.clear();
+            productList.addAll(products);
+            adapter.updateData(productList);
         });
 
-        recyclerView.setAdapter(adapter);
-    }
-
-    private ArrayList<Product> getDummyProducts() {
-        ArrayList<Product> list = new ArrayList<>();
-        list.add(new Product("Wireless Headphones", "Accessories", 59.99, R.drawable.headphones));
-        list.add(new Product("Smartphone", "Phones", 499.00, R.drawable.smartphone));
-        list.add(new Product("Fitness Watch", "Watches", 99.99, R.drawable.smartwatch));
-        list.add(new Product("Bluetooth Speaker", "Accessories", 39.99, R.drawable.speaker));
-        return list;
+        // 🔁 Insert dummy products only once (if DB is empty)
+        productViewModel.getAllProducts().observe(this, products -> {
+            if (products == null || products.isEmpty()) {
+                productViewModel.insertAll(getDummyProducts());
+            }
+        });
     }
 
     @Override

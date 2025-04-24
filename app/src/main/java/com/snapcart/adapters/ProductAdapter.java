@@ -1,72 +1,64 @@
 package com.snapcart.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.snapcart.data.CartManager;
 
 import com.snapcart.R;
-import com.snapcart.models.Product;
+import com.snapcart.data.database.ProductEntity;
 
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
 
-    public interface OnAddToCartClickListener {
-        void onAddToCart(Product product);
+    private List<ProductEntity> productList;
+    private Context context;
+
+    public ProductAdapter(List<ProductEntity> productList, Context context) {
+        this.productList = productList;
+        this.context = context;
     }
 
-    private final List<Product> products;
-    private final OnAddToCartClickListener listener;
-
-    public ProductAdapter(List<Product> products, OnAddToCartClickListener listener) {
-        this.products = products;
-        this.listener = listener;
+    public void updateData(List<ProductEntity> newList) {
+        productList = newList;
+        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_product, parent, false);
         return new ProductViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        Product product = products.get(position);
-        holder.name.setText(product.getName());
-        holder.price.setText("$" + product.getPrice());
-        holder.image.setImageResource(product.getImageResId());
-
-        holder.addToCart.setOnClickListener(v -> {
-            if (listener != null) {
-                listener.onAddToCart(product);
-            }
-        });
+        ProductEntity p = productList.get(position);
+        holder.name.setText(p.getTitle());
+        holder.price.setText("$" + String.format("%.2f", p.getPrice()));
+        holder.image.setImageResource(p.getImageResId());
     }
 
     @Override
     public int getItemCount() {
-        return products.size();
+        return productList.size();
     }
 
     static class ProductViewHolder extends RecyclerView.ViewHolder {
-        ImageView image;
         TextView name, price;
-        Button addToCart;
+        ImageView image;
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.product_image);
-            name = itemView.findViewById(R.id.product_name);
-            price = itemView.findViewById(R.id.product_price);
-            addToCart = itemView.findViewById(R.id.add_to_cart);
+            name = itemView.findViewById(R.id.text_product_name);
+            price = itemView.findViewById(R.id.text_product_price);
+            image = itemView.findViewById(R.id.image_product);
         }
     }
 }

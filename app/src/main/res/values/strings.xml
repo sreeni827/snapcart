@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">SnapCart</string>
+
+    <!-- Categories for product filter -->
+    <string-array name="categories_array">
+        <item>All</item>
+        <item>Headphones</item>
+        <item>Smartphone</item>
+        <item>Smartwatch</item>
+        <item>Speakers</item>
+    </string-array>
+</resources>

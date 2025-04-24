@@ -12,18 +12,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.snapcart.R;
-import com.snapcart.models.Product;
 import com.snapcart.data.CartManager;
+import com.snapcart.data.database.CartEntity;
+import com.snapcart.data.database.ProductEntity;
 
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
 
-    private final List<Product> cartList;
+    private final List<ProductEntity> cartList;
     private final Context context;
     private final Runnable onCartChanged;
 
-    public CartAdapter(List<Product> cartList, Context context, Runnable onCartChanged) {
+    public CartAdapter(List<ProductEntity> cartList, Context context, Runnable onCartChanged) {
         this.cartList = cartList;
         this.context = context;
         this.onCartChanged = onCartChanged;
@@ -38,12 +39,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
-        Product product = cartList.get(position);
+        ProductEntity product = cartList.get(position);
 
         holder.titleTextView.setText(product.getTitle());
         holder.priceTextView.setText(String.format("$%.2f", product.getPrice()));
         holder.quantityTextView.setText(String.valueOf(product.getQuantity()));
-        holder.imageView.setImageResource(product.getImageRes());
+        holder.imageView.setImageResource(product.getImageResId());
 
         holder.increaseButton.setOnClickListener(v -> {
             CartManager.getInstance().increaseQuantity(product);
@@ -83,4 +84,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             decreaseButton = itemView.findViewById(R.id.button_decrease);
         }
     }
+
+    public List<CartEntity> getItems() {
+        return cartItems;
+    }
+
 }
