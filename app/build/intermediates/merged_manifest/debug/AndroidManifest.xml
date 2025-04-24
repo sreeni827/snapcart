@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="21"
+        android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
@@ -22,7 +22,7 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:extractNativeLibs="true"
+        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="SnapCart"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -32,9 +32,8 @@
 
         <!-- ✅ Main launcher screen -->
         <activity
-            android:name="com.snapcart.LoginActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:name="com.snapcart.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.snapcart.SplashActivity"
+            android:name="com.snapcart.activities.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,36 +52,37 @@
 
         <!-- 🔐 Registration screen -->
         <activity
-            android:name="com.snapcart.RegisterActivity"
+            android:name="com.snapcart.activities.RegisterActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <!-- 🛒 Product list screen -->
         <activity
-            android:name="com.snapcart.ProductListActivity"
+            android:name="com.snapcart.activities.ProductListActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <!-- 🛍 Cart screen -->
         <activity
-            android:name="com.snapcart.CartActivity"
+            android:name="com.snapcart.activities.CartActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <!-- 💳 Checkout screen (optional, if implemented) -->
         <activity
-            android:name="com.snapcart.CheckoutActivity"
+            android:name="com.snapcart.activities.CheckoutActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <!-- 🧪 Temporary test screen (remove or keep as needed) -->
         <activity
-            android:name="com.snapcart.LogoTestActivity"
+            android:name="com.snapcart.activities.LogoTestActivity"
             android:exported="true" />
         <activity
-            android:name="com.snapcart.OrdersActivity"
+            android:name="com.snapcart.activities.OrdersActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.snapcart.activities.OrderDetailsActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
@@ -155,6 +155,13 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
 
         <meta-data
             android:name="com.google.android.gms.version"

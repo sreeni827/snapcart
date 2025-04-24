@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="edit_search" type="id"/>
+    <item name="home_recycler_view" type="id"/>
+    <item name="nav_home" type="id"/>
+    <item name="nav_search" type="id"/>
+    <item name="nav_cart" type="id"/>
+    <item name="nav_profile" type="id"/>
+</resources>

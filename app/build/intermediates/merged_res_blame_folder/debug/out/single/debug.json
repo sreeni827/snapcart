@@ -1,158 +1,246 @@
 [
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_smartphone.jpg.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\smartphone.jpg"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_laptop.jpg.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\laptop.jpg"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_fragment_search.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\fragment_search.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_headphones.jpg.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\headphones.jpg"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_bg_card.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\bg_card.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_speaker.jpg.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\speaker.jpg"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_register.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_register.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_profile.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_plus.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_plus.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_speaker.jpg.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\speaker.jpg"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_search_background.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\search_background.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_login.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_login.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_item_order.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\item_order.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_test_logo.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_test_logo.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_item_product.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\item_product.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_product_list.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_product_list.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_logo_snapcart.png.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\logo_snapcart.png"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_cart.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_cart.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_item_product.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\item_product.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_bg_edittext.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\bg_edittext.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_home.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_smartwatch.jpg.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\smartwatch.jpg"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_profile_placeholder.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_profile_placeholder.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\menu_menu_main.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\menu\\menu_main.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_headphones.jpg.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\headphones.jpg"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_orders.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_orders.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_checkout.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_checkout.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_fragment_cart.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\fragment_cart.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_item_order.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\item_order.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_orders.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_orders.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_item_cart.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\item_cart.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_item_cart_product.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\item_cart_product.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_checkout.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_checkout.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_circle_background.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\circle_background.xml"
     },
     {
-        "merged": "com.snapcart.app-merged_res-36:/layout_activity_cart.xml.flat",
-        "source": "com.snapcart.app-main-38:/layout/activity_cart.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable_logo_snapcart.png.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\drawable\\logo_snapcart.png"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_register.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_splash.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_splash.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_cart.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_cart.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_item_cart_product.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\item_cart_product.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_minus.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_minus.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\layout_activity_test_logo.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\layout\\activity_test_logo.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_orders.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_orders.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_login.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\menu_menu_main.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\menu\\menu_main.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-pngs-32:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-36:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-38:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_smartphone.jpg.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\smartphone.jpg"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_cart.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_cart.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_bg_edittext.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\bg_edittext.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_product_list.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_product_list.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_placeholder.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_smartwatch.jpg.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\smartwatch.jpg"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_checkout.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_checkout.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.snapcart.app-merged_res-48:/layout_fragment_profile.xml.flat",
+        "source": "com.snapcart.app-main-50:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_order_details.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_order_details.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_bg_card.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\bg_card.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_main.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-merged_res-48:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Gradle\\gradle-6.8.3\\daemon\\8.10\\com.snapcart.app-main-50:\\mipmap-xhdpi\\ic_launcher.webp"
     }
 ]

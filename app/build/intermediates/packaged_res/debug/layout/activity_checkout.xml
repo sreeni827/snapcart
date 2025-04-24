@@ -1,41 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FAFAFA"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- 🔷 Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/checkout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Checkout"
+            android:titleTextColor="#FFFFFF"
+            android:elevation="4dp" />
+
+        <!-- 📋 Order Summary -->
         <TextView
             android:id="@+id/text_order_summary"
+            android:text="Your Items:"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Order Summary"
-            android:textSize="16sp"
-            android:paddingBottom="16dp" />
+            android:paddingBottom="8dp" />
 
+        <!-- 🏠 Address Input -->
         <EditText
             android:id="@+id/edit_address"
-            android:hint="Delivery Address"
+            android:hint="Enter delivery address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:layout_marginBottom="16dp" />
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
 
+        <!-- 💳 Payment Options -->
         <Spinner
             android:id="@+id/spinner_payment_method"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginTop="16dp" />
 
+        <!-- ✅ Confirm Button -->
         <Button
             android:id="@+id/button_confirm_order"
             android:text="Confirm Order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#388E3C"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/checkout_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: $0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <RadioGroup
+            android:id="@+id/payment_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash on Delivery" />
+
+            <RadioButton
+                android:id="@+id/radio_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit/Debit Card" />
+
+        </RadioGroup>
+
+
     </LinearLayout>
 </ScrollView>

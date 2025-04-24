@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FAFAFA"
     android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAFAFA"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- ✅ Toolbar like OrdersActivity -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/cart_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:title="Your Cart"
-        android:titleTextColor="@android:color/white"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp" />
+    <!-- 🟡 Toolbar-like heading -->
+    <TextView
+        android:text="🛒 Your Cart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="12dp" />
 
     <!-- 🔔 Empty Cart Message -->
     <TextView
         android:id="@+id/text_cart_empty"
-        android:text="🛒 Your cart is empty"
-        android:textSize="18sp"
-        android:gravity="center"
+        android:text="Your cart is empty"
+        android:textSize="16sp"
         android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@android:color/darker_gray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/darker_gray"
-        android:padding="12dp" />
+        android:layout_marginBottom="8dp" />
 
-    <!-- 🧾 Cart Item List -->
+    <!-- 📦 Cart Items List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cart_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:padding="4dp" />
 
-    <!-- 💵 Total Amount -->
+    <!-- 💵 Total and Checkout -->
     <TextView
         android:id="@+id/cart_total"
         android:text="Total: $0.00"
@@ -43,16 +52,15 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:padding="8dp" />
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp" />
 
-    <!-- ✅ Proceed to Checkout -->
     <Button
         android:id="@+id/button_checkout"
         android:text="Proceed to Checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
         android:backgroundTint="#388E3C"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp" />
 </LinearLayout>

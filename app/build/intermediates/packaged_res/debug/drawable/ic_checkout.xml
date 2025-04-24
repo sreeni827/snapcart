@@ -1,0 +1,9 @@
+<!-- res/drawable/ic_checkout.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <path android:fillColor="#000000"
+        android:pathData="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22
+                         A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,17L5,15L8.5,11.5
+                         L11,14L17,8L19,10L11,18L7,17Z"/>
+</vector>

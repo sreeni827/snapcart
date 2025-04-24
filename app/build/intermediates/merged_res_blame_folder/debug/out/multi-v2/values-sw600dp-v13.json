@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.snapcart.app-mergeDebugResources-34:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.snapcart.app-mergeDebugResources-46:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Gradle\\gradle-6.8.3\\caches\\8.10\\transforms\\7786b89253a93b316cd8a8996bb294cb\\transformed\\appcompat-1.6.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Gradle\\gradle-6.8.3\\caches\\8.10\\transforms\\b2ae71ebce6184b9e480309fa2465141\\transformed\\material-1.11.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Gradle\\gradle-6.8.3\\caches\\8.10\\transforms\\429228919fb1ec8870382aff07de7c3e\\transformed\\material-1.12.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

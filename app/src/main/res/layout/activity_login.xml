@@ -10,15 +10,25 @@
         android:gravity="center"
         android:padding="24dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
+        <!-- 🟩 Card-style login form -->
         <LinearLayout
             android:orientation="vertical"
             android:padding="24dp"
             android:background="@drawable/bg_card"
+            android:elevation="6dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="4dp">
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Welcome to SnapCart 👋"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp" />
 
             <EditText
                 android:id="@+id/email"
@@ -38,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edittext"
                 android:padding="12dp"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginBottom="16dp" />
 
             <Button
                 android:id="@+id/login_button"
@@ -46,8 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#388E3C"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="16dp" />
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/go_to_register"

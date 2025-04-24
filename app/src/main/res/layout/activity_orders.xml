@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#FAFAFA"
+    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- ✅ Custom Toolbar -->
+    <!-- 🟦 Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/orders_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:title="Your Orders"
-        app:titleTextColor="#FFFFFF"
-        app:navigationIcon="?attr/homeAsUpIndicator" />
+        android:title="My Orders"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp" />
 
-    <!-- Your orders list or layout goes here -->
-    <!-- Example placeholder -->
+    <!-- ℹ️ Empty message -->
     <TextView
+        android:id="@+id/text_no_orders"
+        android:text="📭 You have no orders yet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is where orders will be listed"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="#555555"
-        android:layout_marginTop="16dp" />
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:padding="12dp"
+        android:visibility="gone" />
+
+    <!-- 📦 Order history list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orders_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="12dp" />
 
 </LinearLayout>
